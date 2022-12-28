@@ -84,6 +84,8 @@ export class AppService {
 
   async sendEmail(file:any, sendFileDto: SendFileDto, imgFile?:any){
 
+    console.log("process.env.NODEMAILER_USERNAME", process.env.NODEMAILER_USERNAME)
+    console.log("process.env.NODEMAILER_PASSWORD", process.env.NODEMAILER_PASSWORD)
     var transporter = nodemailer.createTransport({
       host: "smtp-mail.outlook.com", // hostname
       secureConnection: false, // TLS requires secureConnection to be false
